@@ -1,3 +1,10 @@
+/**
+ * Eftirfarandi setur upp grunn umbrot (layout) síðu með flexbox.
+ * Við förum yfir flexbox í viku 4 en þangað til er hægt að nota þetta
+ * sem grunn og án breytinga.
+ * Athugið að til þess að þetta virki þar að setja <div class="wrapper"> utan um allt efni 
+ * innan <body>.
+ */
 .wrapper {
   /* Notum grid hér til að setja upp bil á milli header, meginmáls og fóts */
   display: grid;

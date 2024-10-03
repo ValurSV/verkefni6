@@ -1,3 +1,35 @@
+/** Cards **/
+
+.cards {
+  display: grid;
+  grid-template-rows: auto;
+  gap: var(--vertical-space);
+  justify-items: center;
+  width: 100%;
+}
+
+.cards > .title {
+  width: 100%;
+  text-align: center;
+}
+
+.cards > .content {
+  display: grid;
+  grid-template-rows: auto;
+  gap: var(--vertical-space);
+  justify-items: center;
+  width: 100%;
+}
+
+@media (width >= 700px) {
+  .cards > .content {
+    grid-template-columns: repeat(calc(var(--columns) - 2), 1fr);
+    grid-template-rows: auto;
+  }
+}
+
+/** Card **/
+
 .card {
   display: flex;
   flex-direction: column;
@@ -37,14 +69,14 @@
 }
 
 /**
- * notum nýja selectora! brotið niður
- * .card            <- veljum öll .card
- * :not(            <- nema, við viljum ef _ekki_...
- *   :has(> .image) <- .image sem strangt barn .card
- * )                <- endir á :not()
- * > .content       <- sem er strax barn af .card
- * Þ.e.a.s. fyrir .card sem hefur ekki .image, setja border + radíus á allt .content
- */
+   * notum nýja selectora! brotið niður
+   * .card            <- veljum öll .card
+   * :not(            <- nema, við viljum ef _ekki_...
+   *   :has(> .image) <- .image sem strangt barn .card
+   * )                <- endir á :not()
+   * > .content       <- sem er strax barn af .card
+   * Þ.e.a.s. fyrir .card sem hefur ekki .image, setja border + radíus á allt .content
+   */
 .card:not(:has(> .image)) > .content {
   border: var(--border-regular);
   border-radius: var(--border-radius-regular);
