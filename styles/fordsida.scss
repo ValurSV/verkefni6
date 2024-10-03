@@ -28,7 +28,7 @@ main > .content {
   border-radius: var(--border-radius-image);
 }
 
-@media (min-width: 500px) {
+@media (width >= 500px) {
   .intro {
     flex-direction: row;
   }
@@ -37,4 +37,3 @@ main > .content {
     max-width: var(--max-width-image);
   }
 }
-
